@@ -21,19 +21,28 @@ source("hypoimg_minimal.R")
 
 Here are two quick tests to see if it loaded the data correctly:
 
+Check the hamlet functions and data:
+
 
 ```r
 ggplot() +
   hypo_anno_l("puella")
 ```
 
-<img src="figure/unnamed-chunk-3-1.png" title="plot of chunk unnamed-chunk-3" alt="plot of chunk unnamed-chunk-3" style="display: block; margin: auto;" />
+<img src="figure/test1-1.png" title="plot of chunk test1" alt="plot of chunk test1" style="display: block; margin: auto;" />
 
+Check the import functions:
 
 
 ```r
-ggplot() + 
-  annotation_custom(hypo_read_svg("logo.c.svg") %>%
+ggplot() +
+  annotation_custom(hypo_read_svg("logo.c.svg") %>% 
                       hypo_recolor_svg(color = "#FB794B"))
 ```
 
+<img src="figure/test2-1.png" title="plot of chunk test1" alt="plot of chunk test2" style="display: block; margin: auto;" />
+
+If those two plots work you should be set :)
+
+
+---
